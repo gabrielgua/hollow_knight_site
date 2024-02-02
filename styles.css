@@ -129,7 +129,8 @@ header nav ul li a {
 }
 
 
-
+#about-me h2,
+#contact h2,
 #more-info h2,
 #about h2,
 .short-description h2 {
@@ -230,6 +231,8 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
+
+#about-me p,
 #infos p,
 .requirements p {
     font-size: 20px;
@@ -247,6 +250,73 @@ header nav ul li a {
     display: block;
 }
 
+
+#about-contact .container {
+    margin-block: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+#about-me,
+#contact {
+    margin: 1rem;
+    display: grid;
+    place-items: start;
+    gap: 1rem;
+    
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+#contact form button,
+#contact form textarea,
+#contact form input {
+    padding: .75rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#contact form textarea {
+    resize: none;
+}
+
+#contact form button {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--links-color);
+    border: none;
+    border-radius: .25rem;
+}
+
+#contact form button:hover {
+    cursor: pointer;
+    background-color: rgb(3, 157, 218);
+}
+
+#contact form textarea:focus,
+#contact form input:focus {
+    outline-color: var(--links-color);
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#about-me a {
+    color: var(--links-color);
+}
+
+
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -259,6 +329,8 @@ footer p {
 footer p a {
     color: var(--links-color);
 }
+
+
 
 
 @media (width <= 768px) {
@@ -303,6 +375,8 @@ footer p a {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+    
 }
 
 @media (width <= 570px) {
